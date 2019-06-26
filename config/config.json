@@ -1,0 +1,18 @@
+{
+    "development": {
+        "username": "root",
+        "password": "victor1998",
+        "database": "boleteria",
+        "host": "localhost",
+        "dialect": "mysql",
+        "timezone": "-05:00"
+    },
+    "staging": {
+        "username": "root",
+        "password": "victor1998",
+        "database": "boleteria",
+        "host": "localhost",
+        "dialect": "mysql",
+        "timezone": "-05:00"
+    }
+}
