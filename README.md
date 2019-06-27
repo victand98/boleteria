@@ -2,7 +2,9 @@
 Para la creación y desarrollo de la presente práctica se ha usado [Git Flow][git flow].  
 La [Descripción](#descripción) del proyecto se encuentra mas abajo.  
 Los comandos de Git Flow que se usaron, son los siguientes:  
-<img src="https://i.pinimg.com/564x/64/a8/05/64a8053f90aba3de788ae2a3929441c2.jpg " alt="drawing" width="200"/>
+
+<img src="https://i.pinimg.com/564x/64/a8/05/64a8053f90aba3de788ae2a3929441c2.jpg " alt="drawing" width="600"/>
+
 ![prueba](https://i.pinimg.com/564x/64/a8/05/64a8053f90aba3de788ae2a3929441c2.jpg =100x20)  
 
 # Boleteria
