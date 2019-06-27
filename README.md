@@ -9,7 +9,7 @@ Para iniciar el el repositorio git se usa el siguiente comando:
 Para la utilización del flujo de trabajo Git Flow se usa el siguiente comando:   
     `git flow init`   
 Agregar *-d* para que cree todas las ramas por defecto, sin necesidad de aceptar línea a línea.  
-![git flow init](https://i.ibb.co/QYY5ppk/Captura-de-pantalla-de-2019-06-27-12-14-19.png)
+![git flow init](https://i.ibb.co/QYY5ppk/Captura-de-pantalla-de-2019-06-27-12-14-19.png)  
 Se realiza un *commit* de la configuración inicial del proyecto.  
 ![commit inical](https://i.ibb.co/Wk8qWdf/Commitinicial.png)
 
