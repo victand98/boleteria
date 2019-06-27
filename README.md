@@ -1,7 +1,7 @@
 # Flujo de trabajo Git
 Para la creación y desarrollo de la presente práctica se ha usado [Git Flow][git flow].  
-La [Descripción](#descripción) del proyecto se encuentra mas abajo.
-Los comandos de Git Flow que se usaron, son los siguientes:
+La [Descripción](#descripción) del proyecto se encuentra mas abajo.  
+Los comandos de Git Flow que se usaron, `son los siguientes:`
 # Boleteria
 Proyecto de sistema de boletería usando el flujo de trabajo de [Git Flow][git flow].
   
