@@ -5,11 +5,12 @@ Proyecto de sistema de boletería usando el flujo de trabajo de [Git Flow][lengu
 - [Descripción](#descripción)
 - [Diagrama de Clases](#diagrama-de-clases)
 - [Tecnologías](#tecnologías)
-- [Conexión a la base de datos](#Conexión a la base de datos)
+- [Conexión a la base de datos](#conexión-a-la-base-de-datos)
 ## Descripción ##
 En el presente trabajo se trata de simular e flujo de trabajo dado en una cooperativa de transporte interprovincial. Es por eso que se está considerando la existencia de buses, boletos, horarios, cooperativa y cliente.  
 Cuando mencionamos un registro de cliente se trata de los clientes frecuentes que quieren ser registrados para acelerar el proceso de compra de boletos.
 ## Diagrama de Clases ##
+A continuación se presenta el diagrama de clases, sobre el cual está basado el proyecto.
 ![Diagrama de clases](https://github.com/victand98/boleteria/blob/develop/public/img/classDiagram.jpeg)
 ## Tecnologías ##
 Las tecnologías escogidas para el mismo, son:<br />  
