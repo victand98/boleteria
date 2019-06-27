@@ -2,6 +2,7 @@
 Proyecto de sistema de boletería usando el flujo de trabajo de [Git Flow][flujo-git_EN].
 .[flujo-git_EN]: https://drive.google.com/file/d/11Jhjz58o6og81mtrva-E2YmJuwCn5OhJ/view?usp=sharing
 
+[lenguajes]: https://github.com/github/linguist/blob/master/lib/linguist/languages.yml
 ## Tecnologías ##
 Las tecnologías escogidas para el mismo, son:
 Backend: JavaScript junto con el framework Node js, por su facil funcionamiento y actual popularidad.
