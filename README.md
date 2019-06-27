@@ -5,6 +5,7 @@ Proyecto de sistema de boletería usando el flujo de trabajo de [Git Flow][lengu
 - [Descripción](#descripción)
 - [Diagrama de Clases](#diagrama-de-clases)
 - [Tecnologías](#tecnologías)
+- [Conexión a la base de datos](#Conexión a la base de datos)
 ## Descripción ##
 En el presente trabajo se trata de simular e flujo de trabajo dado en una cooperativa de transporte interprovincial. Es por eso que se está considerando la existencia de buses, boletos, horarios, cooperativa y cliente.  
 Cuando mencionamos un registro de cliente se trata de los clientes frecuentes que quieren ser registrados para acelerar el proceso de compra de boletos.
@@ -28,19 +29,21 @@ Para eso, en la raíz del proyecto crear una carpeta llamada *config*, o de cual
         
         {
           "development": {
-            "username": "root",
-            "password": "victor1998",
-            "database": "boleteria",
+            "username": "aqui va el nombre de usuario de tu base de datos",
+            "password": "aqui va la contraseña de tu MySQL",
+            "database": "aqui va el nombre de la base de datos",
             "host": "localhost",
             "dialect": "mysql",
             "timezone": "-05:00"
           },
           "staging": {
-            "username": "root",
-            "password": "victor1998",
-            "database": "boleteria",
+            "username": "root", //nombre de usuario de base de datos
+            "password": "aqui va la contraseña de tu MySQL",
+            "database": "aqui va el nombre de la base de datos",
             "host": "localhost",
             "dialect": "mysql",
             "timezone": "-05:00"
            }
         }
+        
+En la parte que dice *host* se puede agregar una **ip** donde esta alojada la base de datos  simplemente **localhost** que indica que la base de datos esta alojada en el mismo ordenador.
