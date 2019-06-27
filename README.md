@@ -1,7 +1,11 @@
-# Boleteria
-Proyecto de sistema de boletería usando el flujo de trabajo de [Git Flow][lenguajes].
+#Flujo de trabajo Git
+Para la creación y desarrollo de la presente práctica se ha usado [Git Flow][git flow]  
 
-[lenguajes]: https://drive.google.com/file/d/11Jhjz58o6og81mtrva-E2YmJuwCn5OhJ/view?usp=sharing
+# Boleteria
+Proyecto de sistema de boletería usando el flujo de trabajo de [Git Flow][git flow].
+La [Descripción](#descripción) del proyecto se encuentra mas abajo.  
+Los comandos de Git Flow que se usaron, son los siguientes:
+[git flow]: https://drive.google.com/file/d/11Jhjz58o6og81mtrva-E2YmJuwCn5OhJ/view?usp=sharing
 - [Descripción](#descripción)
 - [Diagrama de Clases](#diagrama-de-clases)
 - [Tecnologías](#tecnologías)
