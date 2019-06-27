@@ -10,6 +10,9 @@ module.exports = function (sequelize, Sequelize) {
         },
         numeroBuses: {
             type: Sequelize.STRING(5)
+        },
+        external_id: {
+            type: Sequelize.UUID
         }
     }, {
         freezeTableName: true,
