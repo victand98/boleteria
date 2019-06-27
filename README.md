@@ -26,7 +26,7 @@ Las tecnologías escogidas para el mismo, son:<br />
 **Base de datos:** Se ha optado por un gestor de base de datos relacional (SQL) y en este caso se trata de MySQL. Para la conexión entre backend y SGBD se usará el [orm][orm] [Sequelize][sequelize] por su facilidad de implementación y por ser el más utilizado.
 ## Conexión a la base de datos ##
 Para eso, en la raíz del proyecto crear una carpeta llamada *config*, o de cualquier nombre distintivo, donde se debe agregar un archivo de tipo *json* que contendrá la configuración para la conexión a la base de datos.  
-**Nota:** esta configuración sirve cuando se use [Sequelize][sequelize] como orm de conexión a base de datos.
+**Nota:** esta configuración sirve cuando se use Sequelize como orm de conexión a base de datos.
         
         {
           "development": {
@@ -47,4 +47,8 @@ Para eso, en la raíz del proyecto crear una carpeta llamada *config*, o de cual
            }
         }
         
-En la parte que dice *host* se puede agregar una **ip** donde esta alojada la base de datos  simplemente **localhost** que indica que la base de datos esta alojada en el mismo ordenador.
+En la parte que dice *host* se puede agregar una **ip** donde esta alojada la base de datos  simplemente **localhost** que indica que la base de datos esta alojada en el mismo ordenador.  
+Algo importante de mencionar esque tu **base de datos a usar debe estar creada previamente** paraque sobre esa *Sequielize* comience a crear las tablas.
+| TITULO1| TITULO2|
+| ----- | ---- |
+| CONTENIDO COLUMNA 1 | CONTENIDO COLUMNA 2 |
