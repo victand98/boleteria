@@ -25,6 +25,7 @@ Las tecnologías escogidas para el mismo, son:<br />
 ## Conexión a la base de datos ##
 Para eso, en la raíz del proyecto crear una carpeta llamada *config*, o de cualquier nombre distintivo, donde se debe agregar un archivo de tipo *json* que contendrá la configuración para la conexión a la base de datos.  
 **Nota:** esta configuración sirve cuando se use [Sequelize][sequelize] como orm de conexión a base de datos.
+        
         {
           "development": {
             "username": "root",
