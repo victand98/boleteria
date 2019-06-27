@@ -23,23 +23,23 @@ Las tecnologías escogidas para el mismo, son:<br />
   
 **Base de datos:** Se ha optado por un gestor de base de datos relacional (SQL) y en este caso se trata de MySQL. Para la conexión entre backend y SGBD se usará el [orm][orm] [Sequelize][sequelize] por su facilidad de implementación y por ser el más utilizado.
 ## Conexión a la base de datos ##
-Para eso, en la raíz del proyecto crear una carpeta llamada *config*, o de cualquier nombre distintivo, donde se debe agregar un archivo de tipo *json* que contendrá la configuración para la conexión a la base de datos. 
+Para eso, en la raíz del proyecto crear una carpeta llamada *config*, o de cualquier nombre distintivo, donde se debe agregar un archivo de tipo *json* que contendrá la configuración para la conexión a la base de datos.  
 **Nota:** esta configuración sirve cuando se use [Sequelize][sequelize] como orm de conexión a base de datos.
-   {
-    "development": {
-        "username": "root",
-        "password": "victor1998",
-        "database": "boleteria",
-        "host": "localhost",
-        "dialect": "mysql",
-        "timezone": "-05:00"
-      },
-    "staging": {
-        "username": "root",
-        "password": "victor1998",
-        "database": "boleteria",
-        "host": "localhost",
-        "dialect": "mysql",
-        "timezone": "-05:00"
-      }
-    }
+        {
+          "development": {
+            "username": "root",
+            "password": "victor1998",
+            "database": "boleteria",
+            "host": "localhost",
+            "dialect": "mysql",
+            "timezone": "-05:00"
+          },
+          "staging": {
+            "username": "root",
+            "password": "victor1998",
+            "database": "boleteria",
+            "host": "localhost",
+            "dialect": "mysql",
+            "timezone": "-05:00"
+           }
+        }
