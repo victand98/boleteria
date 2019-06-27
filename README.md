@@ -48,8 +48,44 @@ Para eso, en la raíz del proyecto crear una carpeta llamada *config*, o de cual
         }
         
 En la parte que dice *host* se puede agregar una **ip** donde esta alojada la base de datos  simplemente **localhost** que indica que la base de datos esta alojada en el mismo ordenador.  
-Algo importante de mencionar es que tu **base de datos a usar debe estar previamente creada** para que sobre esá *Sequielize* comience a crear las tablas.
+Algo importante de mencionar es que tu **base de datos a usar debe estar previamente creada** para que sobre esá *Sequielize* comience a crear las tablas.  
+Una vez concluida esta parte debes agregar la siguiente configuración en el index de tu proyecto, para este caso, es el archivo *app.js*
 
-| clinte|
-| ------------ |
-| dni | nombre |
+    var models = require('./app/models');
+      models.sequelize.sync().then(() => {
+        console.log("Se ha conectado a la base de Datos.");
+      }).catch(err => {
+        console.log(err, "Ocurrió un error");
+    });
+
+En la caprpeta de modelos de proyecto se debe agregar un archivo *js* para las demas configuraciones que te permitirán comunicar tu aplicación con la bases de datos.
+
+    'use strict';
+    require('dotenv').config();
+
+    var fs = require('fs');
+    var path = require('path');
+    var Sequelize = require('sequelize');
+    var env = process.env.NODE_ENV || 'development';
+    var config = require(path.join(__dirname, '..', '..', 'config', 'config.json'))[env];
+    var sequelize = new Sequelize(config.database, config.username, config.password, config);
+    var db = {};
+
+    fs
+        .readdirSync(__dirname)
+        .filter(function (file) {
+            return (file.indexOf('.') !== 0) && (file !== 'index.js');
+        })
+          .forEach(function (file) {
+              var model = sequelize.import(path.join(__dirname, file));
+              db[model.name] = model;
+          });
+
+        Object.keys(db).forEach(function (modelName) {
+          if ('associate' in db[modelName])
+            db[modelName].associate(db);
+          });
+
+    db.sequelize = sequelize;
+    db.Sequelize = Sequelize;
+    module.exports = db;
