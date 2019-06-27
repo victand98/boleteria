@@ -48,8 +48,8 @@ Para eso, en la raíz del proyecto crear una carpeta llamada *config*, o de cual
         }
         
 En la parte que dice *host* se puede agregar una **ip** donde esta alojada la base de datos  simplemente **localhost** que indica que la base de datos esta alojada en el mismo ordenador.  
-Algo importante de mencionar esque tu **base de datos a usar debe estar creada previamente** paraque sobre esa *Sequielize* comience a crear las tablas.
+Algo importante de mencionar es que tu **base de datos a usar debe estar previamente creada** para que sobre esá *Sequielize* comience a crear las tablas.
 
-| TITULO1| TITULO2|
-| ----- | ---- |
-| CONTENIDO COLUMNA 1 | CONTENIDO COLUMNA 2 |
+| clinte|
+| ------------ |
+| dni | nombre |
