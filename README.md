@@ -8,5 +8,8 @@ Las tecnologías escogidas para el mismo, son:<br />
   
 **Backend:** JavaScript junto con el framework Node js, por su facil funcionamiento y actual popularidad.  
 **Frontend:** Framework para Node js, Express junto a su arquitectura de motor de plantillas "ejs".<br />
+</p>
+<p style="text-align: justify;">
+  
 **Base de datos:** Se ha optado por un gestor de base de datos relacional (SQL) y en este caso se trata de MySQL. Para la conexión entre backend y SGBD se usará el framework Sequelize por su facilidad de implementación y por ser el más utilizado.
 </p>
