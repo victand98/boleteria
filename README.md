@@ -2,7 +2,7 @@
 Proyecto de sistema de boletería usando el flujo de trabajo de [Git Flow][lenguajes].
 
 [lenguajes]: https://drive.google.com/file/d/11Jhjz58o6og81mtrva-E2YmJuwCn5OhJ/view?usp=sharing
-![Diagrama de clases](develop/public/img/classDiagram.jpeg)
+![Diagrama de clases](https://github.com/victand98/boleteria/blob/develop/public/img/classDiagram.jpeg)
 ## Tecnologías ##
 Las tecnologías escogidas para el mismo, son:<br />  
 **Backend:** [JavaScript][js] junto con el framework [Node js][node], por su facil funcionamiento y actual popularidad.  
