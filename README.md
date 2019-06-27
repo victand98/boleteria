@@ -2,7 +2,7 @@
 Para la creación y desarrollo de la presente práctica se ha usado [Git Flow][git flow].  
 La [Descripción](#descripción) del proyecto se encuentra mas abajo.  
 Los comandos de Git Flow que se usaron, son los siguientes:
-![prueba](https://drive.google.com/file/d/1Wutd3NofhoLvChiztokmPmIWfbLZ3C9r/view?usp=sharing)
+![prueba](https://drive.google.com/file/d/1Wutd3NofhoLvChiztokmPmIWfbLZ3C9r/view)
 # Boleteria
 Proyecto de sistema de boletería usando el flujo de trabajo de [Git Flow][git flow].
   
