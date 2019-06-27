@@ -1,7 +1,7 @@
 {
     "development": {
         "username": "root",
-        "password": "victor1998",
+        "password": "toor",
         "database": "boleteria",
         "host": "localhost",
         "dialect": "mysql",
@@ -9,7 +9,7 @@
     },
     "staging": {
         "username": "root",
-        "password": "victor1998",
+        "password": "toor",
         "database": "boleteria",
         "host": "localhost",
         "dialect": "mysql",
