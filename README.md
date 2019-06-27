@@ -1,8 +1,17 @@
 # Flujo de trabajo Git
 Para la creación y desarrollo de la presente práctica se ha usado [Git Flow][git flow].  
 La [Descripción](#descripción) del proyecto se encuentra mas abajo.  
+Primeramente se debe crear un repositorio remoto en cualquier alojador de proyecto Git.  
 Los comandos de Git Flow que se usaron, son los siguientes:  
-![prueba](https://i.ibb.co/Wk8qWdf/Commitinicial.png)  
+Para iniciar el el repositorio git se usa el siguiente comando:  
+    git init
+![git init](https://i.ibb.co/9r4Dh8y/Captura-de-pantalla-de-2019-06-27-12-13-11.png)
+Para la utilización del flujo de trabajo Git Flow se usa el siguiente comando:
+    git flow init  
+Agregar *-d* para que cree todas las ramas por defecto, sin necesidad de aceptar línea a línea.  
+![git flow init](https://i.ibb.co/QYY5ppk/Captura-de-pantalla-de-2019-06-27-12-14-19.png)
+Se realiza un *commit* de la configuración inicial del proyecto.  
+![commit inical](https://i.ibb.co/Wk8qWdf/Commitinicial.png)
 
 # Boleteria
 Proyecto de sistema de boletería usando el flujo de trabajo de [Git Flow][git flow].
