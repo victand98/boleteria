@@ -1,6 +1,5 @@
 # Boleteria
-==============
-Proyecto de sistema de boletería usando el flujo de trabajo de Git Flow.
+Proyecto de sistema de boletería usando el flujo de trabajo de [Git Flow]: https://github.com/ricval/Documentacion/edit/master/Guias/GitHub/mastering-markdown.md
 ## Tecnologías ##
 Las tecnologías escogidas para el mismo, son:
 Backend: JavaScript junto con el framework Node js, por su facil funcionamiento y actual popularidad.
