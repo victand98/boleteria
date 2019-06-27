@@ -21,3 +21,10 @@ Las tecnologías escogidas para el mismo, son:<br />
 [sequelize]: http://docs.sequelizejs.com/
   
 **Base de datos:** Se ha optado por un gestor de base de datos relacional (SQL) y en este caso se trata de MySQL. Para la conexión entre backend y SGBD se usará el framework [Sequelize][sequelize] por su facilidad de implementación y por ser el más utilizado.
+También puedes simplemente identar tu código con cuatro espacios:
+
+        function fancyAlert(arg) {
+          if(arg) {
+            $.facebox({div:'#foo'})
+          }
+        }
