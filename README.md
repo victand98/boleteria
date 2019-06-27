@@ -1,5 +1,6 @@
 # Boleteria
 Proyecto de sistema de boletería usando el flujo de trabajo de [Git Flow][lenguajes].
+
 [lenguajes]: https://drive.google.com/file/d/11Jhjz58o6og81mtrva-E2YmJuwCn5OhJ/view?usp=sharing
 ## Tecnologías ##
 Las tecnologías escogidas para el mismo, son:
