@@ -1,5 +1,7 @@
 # Boleteria
+==============
 Proyecto de sistema de boletería usando el flujo de trabajo de Git Flow.
+## Tecnologías ##
 Las tecnologías escogidas para el mismo, son:
 Backend: JavaScript junto con el framework Node js, por su facil funcionamiento y actual popularidad.
 Frontend: Framework para Node js, Express junto a su arquitectura de motor de plantillas "ejs".
