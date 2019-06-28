@@ -1,0 +1,82 @@
+<script src="../assets/assets/js/validator.js"></script>
+<script>    
+
+    $().ready(function () {
+        
+        // validate signup form on keyup and submit
+        $("#formulario").validate({
+            rules: {
+                lugarOrigen: {
+                    required: true,
+                    minlength: 4
+                },
+                lugarDestino: {
+                    required: true,
+                    minlength: 4
+                },
+                horaSalida: {
+                    required: true
+                    //time: true
+                },
+                fechaSalida: {
+                    required: true
+                    //date: true
+                }
+            },
+            messages: {
+                lugarOrigen: {
+                    required: "Ingrese la lugar de origen",
+                    minlength: ""
+                },
+                lugarDestino: {
+                    required: "Ingrese la lugar de destino",
+                    minlength: ""
+                },
+//                 horaSalida: {
+//                    required: "Ingrese la hora de Salida"
+//                },
+                fechaSalida: {
+                    required: "Ingrese Fecha"
+                }
+            }
+        });
+
+    });
+</script>
+<header class="major">
+    <h2> Horario </h2>    
+</header>
+<section id="content">
+    <% if (locals.flash) { %>
+    <div class="alert alert-danger">
+        <%- locals.flash %>
+    </div>
+    <% } %>  
+    <form method="POST" action="#" id="formulario">
+        <div class="row gtr-uniform gtr-50">
+            <!--            Almacena el externalId para las modificaciones-->
+            <input type="hidden" value="0" id="external" name="external"/>    
+
+            <div class="col-6 col-12-xsmall">
+                <input type="text" name="lugarOrigen" id="lugarOrigen" placeholder="lugarOrigen" />
+            </div>
+            <div class="col-6 col-12-xsmall">
+                <input type="text" name="lugarDestino" id="lugarDestino"  placeholder="lugarDestino" readonly/>
+            </div>
+            <div class="col-6 col-12-xsmall">
+                <input type="time" name="horaSalida" id="horaSalida"  placeholder="horaSalida" readonly/>
+            </div>
+            <div class="col-6 col-12-xsmall">
+                <input type="date" name="fecha" id="fechaSalida" placeholder="fecha" style="color: red"/>
+            </div>
+            <div class="col-12">
+                <ul class="actions navbar-nav">
+                    <li><input type="submit" value="GUARDAR" class="primary" /></li>
+                    <li><a href="#" class="btn btn-danger">CANCELAR</a></li>
+                </ul>
+            </div> 
+        </div>
+    </form>
+</section>
+
+
