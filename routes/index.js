@@ -1,9 +1,16 @@
 var express = require('express');
-var router = express.Router();
+var app = express.Router();
+
+var cooperativa = require('../app/controllers/CooperativaController');
+var CooperativaController = new cooperativa();
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+app.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-module.exports = router;
+app.post('/guardar_coop',CooperativaController.guardar);
+app.get('/cooperativa', CooperativaController.verCoop);
+
+
+module.exports = app;
