@@ -11,9 +11,9 @@ module.exports = function (sequelize, Sequelize) {
         lugarDestino : {
             type: Sequelize.STRING(50)
         },
-//        horaSalida: {
-//            type: Sequelize.TIME
-//        },
+        horaSalida: {
+            type: Sequelize.TIME
+        },
         fechaSalida: {
             type: Sequelize.DATE
         }
