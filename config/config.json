@@ -1,22 +1,14 @@
 {
     "development": {
         "username": "root",
-<<<<<<< HEAD
-        "password": "toor",
-=======
         "password": "root",
->>>>>>> feature/busmodel
         "database": "boleteria",
         "host": "localhost",
         "dialect": "mysql"   
     },
     "staging": {
         "username": "root",
-<<<<<<< HEAD
-        "password": "toor",
-=======
         "password": "root",
->>>>>>> feature/busmodel
         "database": "boleteria",
         "host": "localhost",
         "dialect": "mysql"

@@ -12,12 +12,8 @@
     "ejs": "~2.5.7",
     "express": "~4.16.0",
     "express-flash-notification": "^0.5.0",
-<<<<<<< HEAD
-    "express-session": "^1.16.2",
-=======
     "express-session": "^1.15.6",
->>>>>>> feature/busmodel
-    "http-errors": "^1.6.3",
+    "http-errors": "^1.7.3",
     "morgan": "~1.9.0",
     "mysql2": "^1.6.5",
     "sequelize": "^5.8.12"

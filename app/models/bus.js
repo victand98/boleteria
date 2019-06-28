@@ -1,7 +1,7 @@
 module.exports = function (sequelize, Sequelize) {
 //    var cooperativa = require('../models/cooperativa');
 //    var Cooperativa = new cooperativa(sequelize, Sequelize);   
-    var Bus = sequelize.define('articulo', {
+    var Bus = sequelize.define('bus', {
         id: {
             autoIncrement: true,
             primaryKey: true,
