@@ -1,8 +1,8 @@
 <script src="../assets/assets/js/validator.js"></script>
-<script>    
+<script>
 
     $().ready(function () {
-        
+
         // validate signup form on keyup and submit
         $("#formulario").validate({
             rules: {
@@ -13,7 +13,7 @@
                 numeroBuses: {
                     required: true,
                     minlength: 1
-                }                
+                }
             },
             messages: {
                 nombre: {
@@ -33,19 +33,20 @@
     <h3>Registros</h3>    
 </header>
 <section id="content">
-<!--    Marcará los errores que tengamos al momento de registrar-->
+    <!--    Marcará los errores que tengamos al momento de registrar-->
     <% if (locals.flash) { %>
-        <div class="alert alert-danger">
-            <%- locals.flash %>
-        </div>
-        <% } %>    
-    <form method="POST" action="#" id="formulario">
+    <div class="alert alert-danger">
+        <%- locals.flash %>
+    </div>
+    <% } %>    
+    <form method="POST" action="/guardar_coop" id="formulario">
+        <input type="hidden" name="external" value="0" id="external">
         <div class="row gtr-uniform gtr-50">
             <div class="col-6 col-12-xsmall">
-                <input type="text" name="cedula"  placeholder="Cedula" />
+                <input type="text" id="nombre" name="nombre"  placeholder="Nombre Cooperativa" />
             </div>
             <div class="col-6 col-12-xsmall">
-                <input type="text" name="nombres" placeholder="Nombres" />
+                <input type="number" id="numeroBuses" name="numeroBuses" placeholder="Numero de Buses" />
             </div>
 
             <div class="col-12">
@@ -56,5 +57,36 @@
             </div>
         </div>
     </form>
+    <div class="row">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nro</th>
+                    <th>Nombre</th>
+                    <th>Nro Buses</th>
+                    <th>Accion</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% lista.forEach(function(cooperativa, i) { %>
+
+                <tr>
+                    <td><%= (i+1) %></td>
+                    <td><%= cooperativa.nombre %></td>
+                    <td><%= cooperativa.numeroBuses %></td>
+                    <td><a href="#" id="<%= i %>">Modificar</a></td>
+                    <!--MODIFICAR-->
+            <script>
+                $("#<%= i %>").click(function () {
+                    $("#nombre").val("<%= cooperativa.nombre %>");
+                    $("#numeroBuses").val("<%= cooperativa.numeroBuses %>");
+                    $("#external").val("<%= cooperativa.external_id %>");
+                });
+            </script>
+            </tr>
+            <% }); %>
+            </tbody>
+        </table>
+    </div>
 </section>
 
