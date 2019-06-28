@@ -18,9 +18,8 @@ module.exports = function (sequelize, Sequelize) {
             type: Sequelize.DATE
         }
     },
-    {
-            freezeTableName: true,
-            timestamps: false
+    {   freezeTableName: true,
+        timestamps: false
         });
     return Horario;
     
