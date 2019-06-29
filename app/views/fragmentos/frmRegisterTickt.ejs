@@ -1,0 +1,140 @@
+<script src="../assets/assets/js/validator.js"></script>
+<script>
+
+    $().ready(function () {
+
+        // validate signup form on keyup and submit
+        $("#formulario").validate({
+            rules: {
+                clientes: {
+                    required: true
+                },
+                fecha: {
+                    required: true,
+                    date: true
+                },
+                nro: {
+                    required: true,
+                    minlength: 3
+                },
+                total: {
+                    required: true,
+                    number: true
+                }
+            },
+            messages: {
+                clientes: {
+                    required: "Ingrese la cedula"
+                }
+            }
+        });
+//Se calcula el impuesto al valor agregado
+        function calcularIva() {
+            var subtotal = $("#subtotal").val();
+            //El iva esta definido ya
+            var iva = subtotal * 1 * 0.12;
+            $("#iva").val(iva);
+        }
+//Se realiza la operacion para calcular el total a pagar
+        function calcularTotal() {
+            calcularIva();
+            var subtotal = $("#subtotal").val();
+            var iva = $("#iva").val();
+            //Se considera el descento establecido en la vista
+            var desc = $("#descuento").val();
+            //Calcula el descuento
+            var descuento = ((subtotal * 1) + (iva * 1)) * (desc / 100);
+            var total = ((subtotal * 1) + (iva * 1) - (descuento));
+            $("#total").val(total);
+        }
+//Agregar el valor al input de manera automatica
+        $("#subtotal").keyup(function () {
+            calcularTotal();
+        });
+//Cada vez que se cambie la cantidad determinada para el descuento debe volver a calcular el total 
+//para que los datos se actualicen automaticamente
+        $("#descuento").change(function () {
+            calcularTotal();
+        });
+
+    });
+</script>
+<header class="major">
+    <h2><%= title %></h2>    
+</header>
+<section id="content">
+    <% if (locals.flash) { %>
+    <div class="alert alert-danger">
+        <%- locals.flash %>
+    </div>
+    <% } %>  
+    <form method="POST" action="#" id="formulario">
+        <div class="row gtr-uniform gtr-50">
+            <!--            Almacena el externalId para las modificaciones-->
+            <input type="hidden" value="0" id="external" name="external"/>    
+            <div class="col-12">
+                <select name="clientes" id="clientes">
+                    
+                </select>
+            </div>
+
+            <div class="col-6 col-12-xsmall">
+                <!--                se añede un estilo extra para efectos de presentacion-->
+                <input type="date" name="fecha" id="fecha" placeholder="Fecha" style="color: red"/>
+            </div>
+
+            <div class="col-6 col-12-xsmall">
+                <input type="text" name="nro" id="nro" placeholder="Nro Boleto" />
+            </div>
+            <div class="col-6 col-12-xsmall">
+                <input type="text" name="total" id="total"  placeholder="Total" readonly/>
+            </div>
+
+            <div class="col-12">
+                <ul class="actions navbar-nav">
+                    <li><input type="submit" value="GUARDAR" class="primary" /></li>
+                    <li><a href="#" class="btn btn-danger">CANCELAR</a></li>
+                </ul>
+            </div>
+        </div>
+    </form>
+    <div class="row">
+        <!--        La tabla debe construirse automaticamente-->
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nro</th><th>Cliente</th><th>Nro Factura</th><th>Total</th><th>Accion</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% listaF.forEach(function(factura, i) { %>
+
+                <tr>
+                    <!--                    contador-->
+                    <td><%= (i+1) %></td>
+                    <td>
+                        <%= factura[i].datosPersona %>
+                    </td>
+                    <td><%= factura[i].nroFactura %></td>
+                    <td><%= factura[i].total %></td>
+                    <td><a href="#" id="<%= i %>">Modificar</a></td>
+                    <!--MODIFICAR-->
+            <script>
+                $("#<%= i %>").click(function () {
+                    $("#external").val("<%= factura[i].externalId %>");
+                    $("#clientes").val("<%= factura[i].persona %>");
+                    $("#nro").val("<%= factura[i].nroFactura %>");
+                    $("#fecha").val("<%= factura[i].fecha %>");
+                    $("#subtotal").val("<%= factura[i].subtotal %>");
+                    $("#descuento").val("<%= factura[i].descuento %>");
+                    $("#total").val("<%= factura[i].total %>");
+                    $("#iva").val("<%= factura[i].iva %>");
+                });
+            </script>
+            </tr>
+            <% }); %>
+            </tbody>
+        </table>
+    </div>
+</section>
+
